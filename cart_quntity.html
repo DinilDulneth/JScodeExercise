@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cart quntity</title>
+    </head>
+    <body>
+        
+        <button onclick="
+            console.log(`Cart quantity:${CartQuntity}`);
+        ">
+        show Quntity</button>
+
+        <button onclick="
+            CartQuntity=CartQuntity+1;
+            console.log(`Cart quantity:${CartQuntity}`);
+        ">Add to cart</button>
+
+        <button onclick="
+            CartQuntity=CartQuntity+2;
+            console.log(`Cart quntity:${CartQuntity}`);
+        ">2+</button>
+        
+        <button onclick="
+            CartQuntity=CartQuntity+3;
+            console.log(`Cart quntity:${CartQuntity}`);
+        ">3+</button>
+        
+        <button onclick="
+            CartQuntity=0;
+            console.log(`Cart was reset:${CartQuntity}`);
+        ">Reset Cart</button>
+
+
+        <script>
+            let CartQuntity=0; //'let' can be creat a variable, so then CartQuntity is a variable
+        </script> 
+
+    </body>
+</html>

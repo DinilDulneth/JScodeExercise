@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            .topic
+            {
+                font-size: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+
+        <p class="topic">Amazon Shopping calculator</p>
+        <p>order Under $40 = +$10 shipping.</p>
+        <p>Order Over $40 = FREE Shipping.</p>
+
+        <input class="js-cost-price"  placeholder="Cost Of Order">
+
+        <button onclick="calculateTotal();">Calaculate</button>
+
+        <p class="js-cost-input"></p>
+
+
+        <script>
+            function calculateTotal()
+            {
+                const inputElement = document.querySelector('.js-cost-price');
+                let cost = parseFloat(inputElement.value);
+
+                if(cost < 40)
+                {
+                    cost = cost + 10;
+                }
+                document.querySelector('.js-cost-input').innerHTML = `$${cost}`;
+            }
+
+
+            
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>MYCalculater</title>
+
+        <style>
+            .equal
+            {
+                width: 200px;
+                height: 25px;
+                background-color: rgb(255, 250, 245);
+                text-align: center;
+                margin-top: 15px;
+                border: solid;
+                border-radius: 2px;
+                border-width: 1px;
+                padding: 5px;
+                
+                
+            }
+            .click
+            {
+                width: 30px;
+                height: 30px;
+                border-radius: 20px;
+                border-style: solid;
+                border-width: 1px;
+                font-size: 21px;
+                background-color: rgb(232, 232, 232);
+                border-color: rgb(232, 232, 232);
+                margin-left: 4px;
+            }
+            .num2
+            {
+                margin-left:5px;
+                height: 25px;
+            }
+            .num1
+            {
+                
+                height: 25px;
+            }
+            .topic
+            {
+                font-size:22px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: bold;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        
+        <p class="topic">MYCalculater</p>
+        <p></p>
+        <input placeholder="Number 1" class="num1">
+
+        <button class="click" onclick="addNumber();">+</button>
+        <button class="click" onclick="minus();">-</button>
+        <button class="click" onclick="multiply();">*</button>
+        <button class="click" onclick="division();">/</button>
+
+        <input placeholder="Number 2" class="num2"> 
+
+
+        <div class="equal">
+        </div>
+        
+               
+        <script>
+            function addNumber()
+            {
+                const input1 = document.querySelector('.num1'); 
+                let num_1 = parseFloat(input1.value);
+
+                const input2 = document.querySelector('.num2');
+                let num_2 = parseFloat(input2.value);
+
+                let total;
+
+                total = num_1 + num_2;
+
+                document.querySelector('.equal').innerHTML = `=${total}`;
+            }
+           
+            function minus()
+            {
+                const input_num1 = document.querySelector('.num1');
+                let num_1 =parseFloat (input_num1.value);
+
+                const input_num2 = document.querySelector('.num2');
+                let num_2 =parseFloat (input_num2.value);
+
+                let total;
+
+                total=num_1-num_2;
+
+                document.querySelector('.equal').innerHTML = `=${total}`;
+            }
+
+            function multiply()
+            {
+                const input_num1 = document.querySelector('.num1');
+                let num_1 = parseFloat(input_num1.value);
+
+                const input_num2 = document.querySelector('.num2');
+                let num_2 = parseFloat(input_num2.value);
+
+                let total;
+
+                total=num_1*num_2;
+
+                document.querySelector('.equal').innerHTML = `=${total}`;
+            }
+
+            function division()
+            {
+                const input_num1 = document.querySelector('.num1');
+                let num_1 = parseFloat(input_num1.value);
+
+                const input_num2 = document.querySelector('.num2');
+                let num_2 =parseFloat (input_num2.value);
+
+                let total;
+
+                total=num_1/num_2;
+
+                document.querySelector('.equal').innerHTML = `=${total}`;
+            }
+
+        </script>
+    </body>
+    
+</html>
